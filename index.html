@@ -24,8 +24,43 @@
             </a>
         </div>
     </header>
+    <!-- main -->
     <main class="page">
-
+        <div class="center-page">
+            <section class="card-container">
+                <!-- inputs -->
+                <div class="line-input">
+                    <label>X</label>
+                    <input type="number" id="x" placeholder="Valor de X">
+                </div>
+                <div class="line-input">
+                    <label>Y</label>
+                    <input type="number" id="y" placeholder="Valor de Y">
+                </div>
+                <!-- btns -->
+                <button type="button" class="btn add-btn">adicionar</button>
+                <button type="button" class="btn remove-btn">remover</button>
+            </section>
+            <section class="min-quadrados">
+                <div class="table-container">
+                    <table  class="table" border="1">
+                        <thead>
+                            <th>x</th>
+                            <th>y</th>
+                            <th>&sum;x</th>
+                            <th>&sum;y</th>
+                            <th>&sum;x²</th>
+                            <th>&sum;xy</th>
+                            <th>S</th>
+                        </thead>
+                        <tbody id="body">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="calc-container">
+                </div>
+            </section>
+        </div>
     </main>
     <!-- footer -->
     <footer class="page-footer">

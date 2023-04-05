@@ -95,8 +95,30 @@ input{
   border-radius: var(--borderRadius);
   outline: 0;
 }
+/* table */
+table {
+  border-collapse: collapse;
+  width: 90vw;
+  background-color: var(--white);
+}
 
+th, td {
+  text-align: center;
+}
 
+th {
+  background-color: var(--black);
+  color: var(--white);
+  width: 14.29vw;
+}
+
+tr:nth-child(even) {
+  background-color: var(--grey-200);
+}
+
+td:hover {
+  background-color:var(--grey-400);
+}
 /* header */
 .logo{
   height: 6rem;
@@ -114,12 +136,48 @@ input{
   color: var(--black);
 }
 /* main */
+/* main */
 .page{
   width: 90vw;
   max-width: var(--max-width);
   margin: 0 auto;
   min-height: calc(100vh - (6rem + 3rem));
   /* background: red; */
+}
+.center-page{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: auto;
+  width: 90vw;
+  margin-bottom: 1rem;
+}
+.card-container{
+  background-color: var(--white);
+  border: 1px solid var(--grey-300);
+  border-radius: var(--borderRadius);
+  padding: 2rem;
+}
+.line-input{
+  display: grid;
+  margin-bottom: 10px;
+}
+
+.min-quadrados{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem 1rem;
+  margin-top: 0.75rem;
+}
+.table-container{
+  width: 40vw;
+}
+.calc-container{
+  width: 90vw;
+  height: 10rem;
+  background-color: var(--white);
+  border: 1px solid var(--grey-300);
+  border-radius: var(--borderRadius);
 }
 /* footer */
 .page-footer{

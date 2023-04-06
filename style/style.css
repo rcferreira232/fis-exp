@@ -173,12 +173,26 @@ td:hover {
   width: 40vw;
 }
 .calc-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 90vw;
   height: 10rem;
   background-color: var(--white);
   border: 1px solid var(--grey-300);
   border-radius: var(--borderRadius);
 }
+.calc-info{
+  display: grid;
+  width: 100%;
+  height: 100%;
+  /* background-color: var(--red-dark); */
+}
+.calc-container .btn{
+  height: 100%;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
 /* footer */
 .page-footer{
   display: flex;

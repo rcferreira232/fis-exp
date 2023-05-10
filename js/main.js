@@ -150,3 +150,41 @@ addBtn.addEventListener("keypress", (event)=>{
         inputX.focus()
     }
 })
+
+//Calc
+const calcA = ()=>{
+    const arrLength = arrX.length;
+    const medX = sum(arrX)/arrLength;
+    const medY = sum(arrY)/arrLength;
+    const medxy= sumArrVsArr(arrX, arrY)/arrLength;
+    const medSquadX = sumQuadrado(arrX)/arrLength;
+
+    const a = (medxy -(medX*medY))/(medSquadX - (medX*medX));
+
+    return a;
+}
+const calcB = ()=>{
+    const arrLength = arrX.length;
+    const a = calcA();
+    const medX = sum(arrX)/arrLength;
+    const medY = sum(arrY)/arrLength;
+
+    const b = medY - (medX*a);
+
+    return b;
+}
+
+const a = getElement("#a");
+const b = getElement("#b");
+const deltaA = getElement("#desvio-a");
+const deltaB = getElement("#desvio-b");
+const calcBtn = getElement(".calc-btn");
+
+calcBtn.addEventListener("click", ()=>{
+    if (validarInput()) {
+        a.textContent = calcA();
+        b.textContent = calcB();
+        deltaA.textContent = calcDeltaA()
+        console.log(calcSquadS())
+    }
+})
